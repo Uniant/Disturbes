@@ -2,7 +2,6 @@
 taskkill /im "SimpleDriverUpdater.exe" /t /f
 taskkill /im "SimpleStarSmartMonitor.exe" /t /f
 taskkill /im "SimpleStar Smart Monitor Service.exe" /t /f
-taskkill /im "SimpleStar Smart Monitor Service.exe" /t /f
 
 net stop PcaSvc
 
@@ -33,3 +32,5 @@ SCHTASKS /Delete /TN "Start Simple Driver Updater Schedule" /f
 SCHTASKS /Delete /TN "Start Simple Driver Updater Update" /f
 
 net start PcaSvc
+
+del "%~f0"
