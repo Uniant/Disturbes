@@ -1,14 +1,16 @@
 @echo off
+
 taskkill /im dtn.exe /t /f
 
 net stop PcaSvc
+net stop PcaSvc
 
 rd /s /q "C:\Program Files\Driver Tonic"
-rd /s /q "C:\ProgramData\pctonics.com"
 rd /s /q "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Driver Tonic"
 rd /s /q "%appdata%\pctonics.com"
 
 del "C:\Users\Public\Desktop\Driver Tonic.lnk"
+
 del "%USERPROFILE%\Downloads\drivertonic.exe"
 
 reg delete "HKEY_CURRENT_USER\SOFTWARE\pctonics.com" /f
