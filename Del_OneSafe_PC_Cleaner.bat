@@ -1,4 +1,5 @@
 @echo off
+
 taskkill /im OneSafePCCleaner.exe /t /f
 taskkill /im OSPCNotifications.exe /t /f
 
