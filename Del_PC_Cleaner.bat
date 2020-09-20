@@ -4,18 +4,14 @@ taskkill /im PCCleaner.exe /t /f
 taskkill /im PCCNotifications.exe /t /f
 
 net stop PcaSvc
-net stop PcaSvc
 
 rd /s /q "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\PC Cleaner"
 rd /s /q "C:\ProgramData\PC Cleaner"
 rd /s /q "C:\Program Files (x86)\PC Cleaner"
 rd /s /q "%appdata%\PC Cleaner"
 
-cd c:\windows\system32\tasks\
-del "PC Cleaner automatic scan and notifications."
-
+del "C:\Windows\system32\tasks\PC Cleaner automatic scan and notifications."
 del "%USERPROFILE%\Desktop\PC Cleaner.lnk"
-
 del "%USERPROFILE%\Downloads\PC_Cleaner.exe"
 	
 reg delete "HKLM\SOFTWARE\WOW6432NODE\MICROSOFT\WINDOWS\CURRENTVERSION\UNINSTALL\PC CLEANER_IS1" /f
