@@ -6,6 +6,7 @@ net stop PcaSvc
 REM サービスの停止
 rd /s /q "C:\Program Files\Driver Tonic"
 rd /s /q "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Driver Tonic"
+rd /s /q "C:\ProgramData\pctonics.com"
 rd /s /q "%appdata%\pctonics.com"
 REM インストールされたファイルの削除
 del "C:\Users\Public\Desktop\Driver Tonic.lnk"
